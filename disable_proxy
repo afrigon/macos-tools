@@ -1,0 +1,7 @@
+#!/bin/bash
+
+# HTTP
+networksetup -setwebproxystate wi-fi off
+
+# HTTPS
+networksetup -setsecurewebproxystate wi-fi off

@@ -1,0 +1,9 @@
+#!/bin/bash
+
+# HTTP
+networksetup -setwebproxy wi-fi localhost $1
+networksetup -setwebproxystate wi-fi on
+
+# HTTPS
+networksetup -setsecurewebproxy wi-fi localhost $1
+networksetup -setsecurewebproxystate wi-fi on

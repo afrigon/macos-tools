@@ -1,0 +1,7 @@
+#!/bin/bash
+
+xcrun simctl list devices booted -j | \
+    jq -r .devices[][].udid | \
+    xargs -I DEVICE_ID xcrun simctl keychain DEVICE_ID add-root-cert $1
+
+
